@@ -6,52 +6,6 @@ categories: [recipes, baking, family-recipes]
 tags: [blueberries, cake, breakfast, family-recipes]
 ---
 
-<style>
-  .recipe-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin: 2rem 0;
-    align-items: flex-start;
-  }
-  .recipe-media {
-    flex: 1 1 380px;
-    min-width: 320px;
-  }
-  .recipe-details {
-    flex: 1 1 340px;
-  }
-  .recipe-card {
-    background: #fdfaf6;
-    border: 1px solid #fae8d8;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .recipe-meta-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    text-align: center;
-    border-top: 1px solid #ebd3c0;
-    border-bottom: 1px solid #ebd3c0;
-    padding: 0.75rem 0;
-    margin: 1rem 0;
-    font-size: 0.9rem;
-  }
-  .recipe-meta-grid span {
-    display: block;
-    color: #888;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-  }
-  .ingredient-list, .instruction-list {
-    padding-left: 1.25rem;
-  }
-  .instruction-list li {
-    margin-bottom: 0.85rem;
-  }
-</style>
-
 This simple classic runs deep in the Rand family lore, and was a household staple for my family on weekend mornings. It may not have frosting, but this blueberry cake is a delectable treat. And don't forget to drop the pan a few times at the end!
 
 <div class="recipe-container">

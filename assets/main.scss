@@ -1,0 +1,10 @@
+---
+# Two dashes are required for Jekyll to process Front Matter and compile Sass
+---
+
+@import "minima";
+
+
+// Custom site partials
+@import "custom/home";
+@import "custom/recipes";
