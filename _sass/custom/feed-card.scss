@@ -1,0 +1,140 @@
+// --------------------------------------------------
+// Feed Card Component
+// --------------------------------------------------
+.feed-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(93, 44, 117, 0.35) 0%, transparent 55%),
+    radial-gradient(circle at 85% 80%, rgba(70, 95, 133, 0.32) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(142, 102, 172, 0.22) 0%, transparent 70%),
+    radial-gradient(ellipse at 75% 15%, rgba(186, 170, 206, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 25% 85%, rgba(61, 35, 82, 0.4) 0%, transparent 50%),
+    #1e1b24;
+  background-blend-mode: screen, normal, color-dodge, soft-light, normal;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border-color: rgba(192, 54, 44, 0.5);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    right: -25px;
+    bottom: -25px;
+    z-index: 0;
+    pointer-events: none;
+
+    background:
+      radial-gradient(circle at 20% 30%, rgba(138, 75, 175, 0.65) 0%, transparent 45%),
+      radial-gradient(circle at 80% 75%, rgba(68, 108, 168, 0.6) 0%, transparent 50%),
+      radial-gradient(circle at 60% 20%, rgba(205, 180, 230, 0.45) 0%, transparent 40%),
+      radial-gradient(circle at 30% 80%, rgba(94, 43, 128, 0.7) 0%, transparent 45%);
+    background-size: 100% 100%;
+    filter: url(#acid-wash-turbulence);
+    opacity: 0.55;
+  }
+}
+
+.feed-card-link {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  min-width: 0;
+}
+
+.feed-thumbnail-wrapper {
+  flex: 0 0 220px;
+  max-width: 220px;
+  position: relative;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  min-height: 160px;
+}
+
+.feed-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.feed-card-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: linear-gradient(
+    to right,
+    rgba(20, 18, 25, 0.6) 0%,
+    rgba(20, 18, 25, 0.35) 100%
+  );
+
+  .post-meta {
+    font-size: 0.85rem;
+    color: #c4b5d4;
+    margin-bottom: 6px;
+  }
+
+  .feed-category-tag {
+    text-transform: capitalize;
+    color: #ff7b72;
+  }
+
+  .post-link-title {
+    font-size: 1.45rem;
+    color: #ffffff;
+    line-height: 1.25;
+    margin: 0 0 8px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  .post-excerpt {
+    font-family: $font-body;
+    font-size: 0.95rem;
+    color: #e2daf0;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+}
+
+// --------------------------------------------------
+// Media Queries
+// --------------------------------------------------
+@media screen and (max-width: 640px) {
+  .feed-card-link {
+    flex-direction: column;
+  }
+
+  .feed-thumbnail-wrapper {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    min-height: unset;
+  }
+
+  .feed-card-content {
+    flex: 1 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+  }
+}
