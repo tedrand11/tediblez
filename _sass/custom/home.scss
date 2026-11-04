@@ -147,3 +147,12 @@
     margin-bottom: 0.4rem;
   }
 }
+
+.feed-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  filter: url(#acid-wash-turbulence);
+  opacity: 0.25;
+  pointer-events: none;
+}

@@ -30,7 +30,26 @@ title: Home
 </div>
 
 ---
-
+<!-- SVG Filter for Acid-Wash Liquid Bleach Warping -->
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;" aria-hidden="true">
+  <filter id="acid-wash-turbulence" x="0%" y="0%" width="100%" height="100%">
+    <!-- Generates a soft liquid fractal noise map -->
+    <feTurbulence 
+      type="fractalNoise" 
+      baseFrequency="0.015 0.03" 
+      numOctaves="3" 
+      result="noise" 
+    />
+    <!-- Smears and distorts the underlying gradient by 35px -->
+    <feDisplacementMap 
+      in="SourceGraphic" 
+      in2="noise" 
+      scale="35" 
+      xChannelSelector="R" 
+      yChannelSelector="G" 
+    />
+  </filter>
+</svg>
 <ul class="post-list recipe-feed-grid">
   {% for post in site.posts %}
     <li class="feed-card">
@@ -60,11 +79,8 @@ title: Home
                 <span class="feed-category-tag">{{ post.categories.first }}</span>
               {% endif %}
             </span>
-            {% if post.categories.first %}
-              <span class="feed-category-tag">{{ post.categories.first }}</span>
-            {% endif %}
           </span>
-          <h2 class="post-link-title">{{ post.title | escape }}</h2>
+          <h1 class="post-link-title">{{ post.title | escape }}</h1>
           {% if post.excerpt %}
             <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 22 }}</p>
           {% endif %}
