@@ -1,0 +1,16 @@
+<div class="notepad-paper">
+  <div class="notepad-holes">
+    <div class="hole"></div>
+    <div class="hole"></div>
+    <div class="hole"></div>
+  </div>
+
+  <div class="notepad-content">
+    <h3 class="notepad-title">Ingredients</h3>
+    <ul class="notepad-ingredients">
+      {% for item in page.ingredients %}
+        <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

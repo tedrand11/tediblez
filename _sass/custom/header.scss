@@ -1,0 +1,75 @@
+/* Dark Navbar with Golden Gate International Orange Accent */
+.site-header {
+  background-color: #1e1e1e;
+  border-top: 5px solid #C0362C; /* Official Golden Gate Bridge International Orange */
+  border-bottom: 1px solid #333333;
+  min-height: 56px;
+
+  /* Flex alignment to vertically center the logo and nav links */
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 56px;
+  }
+
+  /* Logo Replacement Alignment */
+  .site-title {
+    display: inline-flex;
+    align-items: center;
+    height: 42px;
+    width: 140px; /* Adjust width to match your logo's aspect ratio */
+
+    /* Image settings */
+    background: url('/assets/images/tedibles-logo.png') no-repeat left center;
+    background-size: contain;
+
+    /* Text hiding for accessibility */
+    text-indent: -9999px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    /* Reset native Minima margins/floats that pull it upward */
+    float: none;
+    margin: 0;
+    line-height: normal;
+
+    transition: transform 0.2s ease;
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+
+  /* Nav Links Container */
+  .site-nav {
+    float: none;
+    line-height: normal;
+
+    .page-link {
+      color: #f0f0f0 !important;
+      font-weight: 500;
+      line-height: normal;
+
+      &:hover {
+        color: #ffffff !important;
+        opacity: 0.85;
+      }
+    }
+
+    /* Mobile Hamburger Icon */
+    .menu-icon > svg path {
+      fill: #ffffff;
+    }
+
+    /* Mobile Dropdown Menu Container */
+    @media screen and (max-width: 600px) {
+      background-color: #1e1e1e;
+      border: 1px solid #333333;
+
+      .page-link {
+        color: #f0f0f0 !important;
+        padding: 8px 12px;
+      }
+    }
+  }
+}

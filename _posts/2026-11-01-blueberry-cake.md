@@ -4,6 +4,7 @@ title: "Gramps' (Red's) Blueberry Cake 🫐🍰"
 date: 2026-11-01 12:00:00 -0700
 categories: [recipes, baking, family-recipes]
 tags: [blueberries, cake, breakfast, family-recipes]
+cover_image: "https://res.cloudinary.com/q0j7dwxf/image/upload/v1793727007/PXL_20261028_202624507.jpg"
 ---
 
 This simple classic runs deep in the Rand family lore, and was a household staple for my family on weekend mornings. It may not have frosting, but this blueberry cake is a delectable treat. And don't forget to drop the pan a few times at the end!

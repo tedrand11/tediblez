@@ -1,0 +1,23 @@
+<div class="sticky-note">
+  <div class="sticky-tape"></div>
+  <h3 class="sticky-title">Overview</h3>
+  
+  <div class="sticky-meta-grid">
+    {% if page.recipe.method %}
+      <div class="sticky-item"><span>Method:</span> {{ page.recipe.method }}</div>
+    {% endif %}
+    {% if page.recipe.prep %}
+      <div class="sticky-item"><span>Prep:</span> {{ page.recipe.prep }}</div>
+    {% endif %}
+    {% if page.recipe.cook %}
+      <div class="sticky-item"><span>Cook:</span> {{ page.recipe.cook }}</div>
+    {% endif %}
+    {% if page.recipe.heat %}
+      <div class="sticky-item"><span>Heat:</span> {{ page.recipe.heat }}</div>
+    {% endif %}
+  </div>
+
+  {% if page.recipe.summary %}
+    <p class="sticky-notes-text">{{ page.recipe.summary }}</p>
+  {% endif %}
+</div>

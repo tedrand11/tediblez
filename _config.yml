@@ -35,8 +35,6 @@ plugins:
 social_links:
   - platform: instagram
     user_url: "https://www.instagram.com/tediblez_bayarea/"
-minima:
-  skin: solarized-dark # Options: classic, dark, auto, solarized-light, solarized-dark
 
 header_pages:
   - pages/about.md
